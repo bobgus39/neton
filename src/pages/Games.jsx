@@ -96,7 +96,7 @@ export default function Games() {
 
         <div className="text-center glass rounded-3xl p-12 border border-orange-500/20" style={{ background: 'linear-gradient(135deg, rgba(120,53,15,0.1), rgba(127,29,29,0.1))' }}>
           <div className="text-5xl mb-6">🚀</div>
-          <h2 className="text-3xl font-black text-white mb-4">¿Tienes una idea para un juego?</h2>
+          <h2 className="text-3xl font-black text-white mb-4">¿Tienes una idea para un juego entretenido?</h2>
           <p className="text-gray-400 mb-8">De la idea al juego publicado. Te acompañamos en todo el proceso.</p>
           <Link to="/contacto">
             <Button size="lg" className="text-white px-10" style={{ background: '#ea580c' }}>{t('games.cta')}</Button>
