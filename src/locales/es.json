@@ -1,0 +1,207 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "portfolio": "Portfolio",
+    "innovation": "Innovación",
+    "games": "Videojuegos",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "badge": "neton — Agencia Digital",
+    "title": "Creamos el futuro",
+    "titleHighlight": "digital de tu negocio",
+    "subtitle": "Desarrollamos webs a medida, integramos inteligencia artificial y creamos experiencias digitales únicas que impulsan tu comercio al siguiente nivel.",
+    "cta": "Ver nuestros servicios",
+    "ctaSecondary": "Ver portfolio",
+    "scrollDown": "Explorar"
+  },
+  "stats": {
+    "projects": "Proyectos entregados",
+    "clients": "Clientes satisfechos",
+    "years": "Años de experiencia",
+    "uptime": "Uptime garantizado"
+  },
+  "services": {
+    "title": "Nuestros Servicios",
+    "subtitle": "Soluciones digitales completas para llevar tu negocio al siguiente nivel",
+    "web": {
+      "title": "Webs para Comercios",
+      "description": "Diseñamos y desarrollamos webs profesionales desde 200€. Con mantenimiento mensual de 30€/mes (primer mes incluido). E-commerce, catálogos, reservas y más."
+    },
+    "database": {
+      "title": "Bases de Datos",
+      "description": "Diseño, optimización y gestión de bases de datos relacionales y NoSQL. Arquitecturas escalables para tu negocio."
+    },
+    "ai": {
+      "title": "IA & ComfyUI",
+      "description": "Integramos flujos de trabajo de inteligencia artificial con ComfyUI para automatizar procesos y crear contenido generativo único."
+    },
+    "games": {
+      "title": "Videojuegos a Medida",
+      "description": "Desarrollamos videojuegos 2D/3D personalizados para marketing, formación, entretenimiento y gamificación de negocios."
+    },
+    "seo": {
+      "title": "SEO & Marketing Digital",
+      "description": "Posicionamos tu web en los primeros resultados de Google con estrategias SEO avanzadas y campañas de marketing digital."
+    },
+    "ecommerce": {
+      "title": "E-commerce",
+      "description": "Tiendas online de alto rendimiento con gestión de inventario, pagos seguros y experiencia de usuario optimizada."
+    },
+    "learnMore": "Más información",
+    "allServices": "Ver todos los servicios",
+    "consult": "Consultar",
+    "maintenanceLabel": "mantenimiento",
+    "maintenanceFree": "(1er mes gratis)",
+    "features": {
+      "responsive": "Diseño responsive",
+      "seo": "SEO técnico incluido",
+      "cms": "Panel de gestión",
+      "payments": "Integración pagos",
+      "maintenanceFree": "1er mes de mantenimiento gratis",
+      "support": "Soporte técnico",
+      "mysql": "MySQL / PostgreSQL",
+      "nosql": "MongoDB / Redis",
+      "queryOpt": "Optimización queries",
+      "backups": "Backups automáticos",
+      "migration": "Migración de datos",
+      "monitoring": "Monitorización",
+      "comfyui": "Flujos ComfyUI",
+      "imageGen": "Generación de imágenes IA",
+      "chatbot": "Chatbots GPT",
+      "analytics": "Análisis de datos",
+      "aiAuto": "Automatización IA",
+      "api": "API personalizada",
+      "game2d3d": "2D / 3D",
+      "webgl": "WebGL / Unity",
+      "multiplayer": "Multijugador",
+      "monetization": "Monetización",
+      "multiplatform": "Publicación multiplataforma",
+      "assets": "Assets incluidos",
+      "audit": "Auditoría SEO",
+      "keywords": "Palabras clave",
+      "linkbuilding": "Link building",
+      "content": "Contenido optimizado",
+      "ads": "Google Ads",
+      "reports": "Informes mensuales",
+      "platform": "WooCommerce / Custom",
+      "gateways": "Pasarelas de pago",
+      "inventory": "Gestión inventario",
+      "shipping": "Envíos automatizados",
+      "billing": "Facturación",
+      "mobileApp": "App móvil opcional"
+    },
+    "customTitle": "¿Necesitas algo personalizado?",
+    "customDesc": "Analizamos tu caso y te ofrecemos la mejor solución adaptada a tu presupuesto.",
+    "customCta": "Solicitar presupuesto gratuito"
+  },
+  "innovation": {
+    "badge": "Innovación",
+    "title": "La vanguardia de la web",
+    "subtitle": "Incorporamos las últimas tecnologías de IA para crear experiencias digitales sin precedentes",
+    "comfyui": {
+      "title": "Workflows con ComfyUI",
+      "description": "Generación de imágenes, vídeos y contenido dinámico mediante pipelines de IA. Automatiza tu producción creativa."
+    },
+    "generative": {
+      "title": "Contenido Generativo",
+      "description": "Chatbots inteligentes, asistentes virtuales y sistemas de recomendación personalizados para tu web."
+    },
+    "automation": {
+      "title": "Automatización",
+      "description": "Workflows automatizados que reducen el trabajo manual y optimizan los procesos de tu negocio."
+    },
+    "realtime": {
+      "title": "Tiempo Real",
+      "description": "Dashboards en tiempo real, notificaciones push y actualizaciones instantáneas para mantener a tus clientes informados."
+    }
+  },
+  "games": {
+    "badge": "Videojuegos",
+    "title": "Videojuegos que convierten",
+    "subtitle": "Transforma tu marketing con experiencias de juego únicas que enganchan a tu audiencia",
+    "types": {
+      "marketing": {
+        "title": "Gamificación de Marketing",
+        "description": "Juegos publicitarios que aumentan el engagement de tu marca en redes sociales y webs."
+      },
+      "training": {
+        "title": "Formación Gamificada",
+        "description": "Simuladores y juegos educativos para formar a tu equipo de manera efectiva y entretenida."
+      },
+      "custom": {
+        "title": "Videojuego a Medida",
+        "description": "Desarrollamos tu idea desde cero: mecánicas, arte, sonido y publicación multiplataforma."
+      },
+      "web": {
+        "title": "Juegos Web",
+        "description": "Experiencias de juego directamente en tu web, sin descargas, para maximizar la participación."
+      }
+    },
+    "cta": "Hablar sobre tu proyecto"
+  },
+  "portfolio": {
+    "title": "Nuestro Portfolio",
+    "subtitle": "Proyectos que demuestran nuestra experiencia",
+    "filters": {
+      "all": "Todos",
+      "web": "Webs",
+      "ecommerce": "E-commerce",
+      "game": "Videojuegos",
+      "ai": "IA"
+    },
+    "viewProject": "Ver proyecto",
+    "viewAll": "Ver todo el portfolio"
+  },
+  "contact": {
+    "badge": "Contacto",
+    "title": "Hablemos de tu proyecto",
+    "subtitle": "Cuéntanos tu idea y te damos una propuesta personalizada sin compromiso",
+    "form": {
+      "name": "Nombre completo",
+      "email": "Email",
+      "phone": "Teléfono (opcional)",
+      "service": "Servicio de interés",
+      "message": "Cuéntanos tu proyecto",
+      "submit": "Enviar mensaje",
+      "submitting": "Enviando...",
+      "success": "Mensaje enviado correctamente. Te contactaremos pronto.",
+      "error": "Error al enviar el mensaje. Por favor, inténtalo de nuevo.",
+      "selectService": "Selecciona un servicio"
+    },
+    "info": {
+      "email": "netonAigency@proton.me",
+      "phone": "+34 642 995 170",
+      "location": "Madrid, España"
+    }
+  },
+  "footer": {
+    "description": "Creamos experiencias digitales que transforman negocios.",
+    "links": "Enlaces",
+    "services": "Servicios",
+    "follow": "Síguenos",
+    "rights": "Todos los derechos reservados.",
+    "privacy": "Privacidad",
+    "terms": "Términos"
+  },
+  "admin": {
+    "dashboard": "Panel de Control",
+    "projects": "Proyectos",
+    "messages": "Mensajes",
+    "settings": "Configuración",
+    "logout": "Cerrar sesión",
+    "newProject": "Nuevo proyecto",
+    "totalProjects": "Total proyectos",
+    "pendingMessages": "Mensajes pendientes",
+    "totalClients": "Clientes totales",
+    "recentMessages": "Mensajes recientes",
+    "login": {
+      "title": "Acceso Admin",
+      "email": "Email",
+      "password": "Contraseña",
+      "submit": "Entrar",
+      "error": "Credenciales incorrectas"
+    }
+  }
+}
