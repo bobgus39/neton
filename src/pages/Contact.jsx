@@ -13,7 +13,13 @@ const INFO_ITEMS = [
 ]
 
 const inputClass = 'w-full bg-white/5 border border-white/20 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-indigo-500/60 transition-colors placeholder:text-gray-600'
+const inputErrorClass = 'w-full bg-white/5 border border-red-500/50 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-red-500/70 transition-colors placeholder:text-gray-600'
 const labelClass = 'block text-gray-400 text-sm mb-1.5 ml-0.5'
+
+function FieldError({ message }) {
+  if (!message) return null
+  return <p className="text-red-400 text-xs mt-1.5 ml-0.5">{message}</p>
+}
 
 export default function Contact() {
   const { t } = useTranslation()
@@ -50,11 +56,25 @@ export default function Contact() {
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <label className={labelClass}>{t('contact.form.name')}</label>
-                  <input className={`${inputClass} ${errors.name ? 'border-red-500/50' : ''}`} placeholder="Juan García" {...register('name', { required: true })} />
+                  <input
+                    className={errors.name ? inputErrorClass : inputClass}
+                    placeholder="Juan García"
+                    {...register('name', { required: t('contact.form.errors.nameRequired') })}
+                  />
+                  <FieldError message={errors.name?.message} />
                 </div>
                 <div>
                   <label className={labelClass}>{t('contact.form.email')}</label>
-                  <input className={`${inputClass} ${errors.email ? 'border-red-500/50' : ''}`} type="email" placeholder="juan@empresa.com" {...register('email', { required: true, pattern: /^\S+@\S+\.\S+$/ })} />
+                  <input
+                    className={errors.email ? inputErrorClass : inputClass}
+                    type="email"
+                    placeholder="juan@empresa.com"
+                    {...register('email', {
+                      required: t('contact.form.errors.emailRequired'),
+                      pattern: { value: /^\S+@\S+\.\S+$/, message: t('contact.form.errors.emailInvalid') },
+                    })}
+                  />
+                  <FieldError message={errors.email?.message} />
                 </div>
               </div>
 
@@ -78,9 +98,9 @@ export default function Contact() {
                 <label className={labelClass}>{t('contact.form.message')}</label>
                 <textarea
                   rows={6}
-                  className={`${inputClass} resize-none ${errors.message ? 'border-red-500/50' : ''}`}
-                  placeholder="Cuéntanos los detalles de tu proyecto..."
-                  {...register('message', { required: true, minLength: 20 })}
+                  className={`${inputClass} resize-none`}
+                  placeholder={t('contact.form.messagePlaceholder')}
+                  {...register('message')}
                 />
               </div>
 
@@ -112,17 +132,17 @@ export default function Contact() {
               </div>
             ))}
             <div className="glass rounded-2xl p-6 border border-white/10">
-              <h3 className="text-white font-bold mb-4">Horario de atención</h3>
+              <h3 className="text-white font-bold mb-4">{t('contact.hours.title')}</h3>
               <div className="space-y-2 text-sm text-gray-400">
-                <div className="flex justify-between"><span>Lunes - Viernes</span><span className="text-white">9:00 - 18:00</span></div>
-                <div className="flex justify-between"><span>Sábado</span><span className="text-white">10:00 - 14:00</span></div>
-                <div className="flex justify-between"><span>Domingo</span><span className="text-gray-600">Cerrado</span></div>
+                <div className="flex justify-between"><span>{t('contact.hours.weekdays')}</span><span className="text-white">9:00 - 18:00</span></div>
+                <div className="flex justify-between"><span>{t('contact.hours.saturday')}</span><span className="text-white">10:00 - 14:00</span></div>
+                <div className="flex justify-between"><span>{t('contact.hours.sunday')}</span><span className="text-gray-600">{t('contact.hours.closed')}</span></div>
               </div>
             </div>
             <div className="glass rounded-2xl p-6 border border-indigo-500/20 bg-indigo-500/5">
               <div className="text-2xl mb-3">⚡</div>
-              <h3 className="text-white font-bold mb-2">Respuesta en 24h</h3>
-              <p className="text-gray-400 text-sm">Nos comprometemos a responder todas las consultas en menos de 24 horas laborables.</p>
+              <h3 className="text-white font-bold mb-2">{t('contact.response.title')}</h3>
+              <p className="text-gray-400 text-sm">{t('contact.response.text')}</p>
             </div>
           </div>
         </div>

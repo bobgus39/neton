@@ -1,16 +1,17 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { Button, Chip } from '@heroui/react'
 
 const PROJECTS = [
-  { id: 1, title: 'ElectroShop Premium', category: 'ecommerce', img: 'https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=800&q=80', tech: ['React', 'Node.js', 'MySQL', 'Stripe'], desc: 'Tienda online de electrónica con 10.000+ productos y app móvil.' },
-  { id: 2, title: 'ArtGen Studio', category: 'ai', img: 'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&q=80', tech: ['Python', 'ComfyUI', 'React', 'FastAPI'], desc: 'Plataforma de generación de arte con IA para diseñadores.' },
-  { id: 3, title: 'DragonQuest Corp', category: 'game', img: 'https://images.unsplash.com/photo-1511512578047-dfb367046420?w=800&q=80', tech: ['Unity', 'C#', 'WebGL', 'PHP'], desc: 'Videojuego corporativo RPG para gamificación de ventas.' },
-  { id: 4, title: 'RestaurantePro', category: 'web', img: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80', tech: ['React', 'Node.js', 'MySQL'], desc: 'Web con reservas online, menú digital y delivery integrado.' },
-  { id: 5, title: 'FashionAI Catalog', category: 'ai', img: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80', tech: ['ComfyUI', 'Python', 'React', 'PostgreSQL'], desc: 'Generador automático de catálogos de moda con modelos IA.' },
-  { id: 6, title: 'MindRunner Game', category: 'game', img: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&q=80', tech: ['Phaser.js', 'Node.js', 'Socket.io'], desc: 'Juego educativo multijugador para aprendizaje de idiomas.' },
-  { id: 7, title: 'Clínica MediConnect', category: 'web', img: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80', tech: ['React', 'Node.js', 'MySQL', 'Twilio'], desc: 'Portal de pacientes con citas online, chatbot y telemedicina.' },
-  { id: 8, title: 'SuperMarket Live', category: 'ecommerce', img: 'https://images.unsplash.com/photo-1542838132-92c53300491e?w=800&q=80', tech: ['Next.js', 'PostgreSQL', 'Redis', 'Stripe'], desc: 'Supermercado online con stock en tiempo real y app propia.' },
+  { id: 1, title: 'ElectroShop Premium', category: 'ecommerce', img: 'https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=800&q=80', tech: ['React', 'Node.js', 'MySQL', 'Stripe'] },
+  { id: 2, title: 'ArtGen Studio', category: 'ai', img: 'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&q=80', tech: ['Python', 'ComfyUI', 'React', 'FastAPI'] },
+  { id: 3, title: 'DragonQuest Corp', category: 'game', img: 'https://images.unsplash.com/photo-1511512578047-dfb367046420?w=800&q=80', tech: ['Unity', 'C#', 'WebGL', 'PHP'] },
+  { id: 4, title: 'RestaurantePro', category: 'web', img: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80', tech: ['React', 'Node.js', 'MySQL'] },
+  { id: 5, title: 'FashionAI Catalog', category: 'ai', img: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80', tech: ['ComfyUI', 'Python', 'React', 'PostgreSQL'] },
+  { id: 6, title: 'MindRunner Game', category: 'game', img: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&q=80', tech: ['Phaser.js', 'Node.js', 'Socket.io'] },
+  { id: 7, title: 'Clínica MediConnect', category: 'web', img: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80', tech: ['React', 'Node.js', 'MySQL', 'Twilio'] },
+  { id: 8, title: 'SuperMarket Live', category: 'ecommerce', img: 'https://images.unsplash.com/photo-1542838132-92c53300491e?w=800&q=80', tech: ['Next.js', 'PostgreSQL', 'Redis', 'Stripe'] },
 ]
 
 const FILTERS = ['all', 'web', 'ecommerce', 'game', 'ai']
@@ -53,7 +54,10 @@ export default function Portfolio() {
 
         {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {filtered.map(({ id, title, img, tech, desc, category }) => (
+          {filtered.map(({ id, title, img, tech, category }) => {
+            const projectDescs = t('portfolio.projects', { returnObjects: true })
+            const desc = projectDescs.find((p) => p.id === id)?.desc || ''
+            return (
             <div
               key={id}
               className="group relative overflow-hidden rounded-2xl border border-white/10 hover:border-indigo-500/40 transition-all duration-300 hover:scale-[1.02]"
@@ -77,19 +81,15 @@ export default function Portfolio() {
                 </div>
               </div>
             </div>
-          ))}
+          )})}
         </div>
 
         <div className="mt-16 text-center glass rounded-3xl p-12 border border-white/10">
-          <h2 className="text-3xl font-black text-white mb-4">
-            ¿Tu proyecto podría estar aquí?
-          </h2>
-          <p className="text-gray-400 mb-8">
-            Hablemos sobre lo que podemos crear juntos.
-          </p>
-          <Button size="lg" className="gradient-bg text-white border-0 px-10">
-            Empezar proyecto
-          </Button>
+          <h2 className="text-3xl font-black text-white mb-4">{t('portfolio.cta.title')}</h2>
+          <p className="text-gray-400 mb-8">{t('portfolio.cta.subtitle')}</p>
+          <Link to="/contacto">
+            <Button size="lg" className="gradient-bg text-white border-0 px-10">{t('portfolio.cta.button')}</Button>
+          </Link>
         </div>
       </div>
     </div>

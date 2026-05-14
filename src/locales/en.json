@@ -7,6 +7,12 @@
     "games": "Games",
     "contact": "Contact"
   },
+  "home": {
+    "cta": {
+      "title": "Ready to get started?",
+      "subtitle": "Tell us about your project and we'll send you a proposal within 24h."
+    }
+  },
   "hero": {
     "badge": "neton — Digital Agency",
     "title": "We build the digital future",
@@ -115,6 +121,30 @@
     "realtime": {
       "title": "Real Time",
       "description": "Real-time dashboards, push notifications, and instant updates to keep your customers informed."
+    },
+    "comfyuiSection": {
+      "description": "We integrate advanced ComfyUI workflows directly into your website. From product image generators to creative tools for your users, all connected to your database.",
+      "requestDemo": "Request a demo",
+      "steps": ["User uploads image or text", "ComfyUI processes with AI", "Result saved to your DB", "Automatic integration into your site"]
+    },
+    "capabilities": {
+      "comfyui": ["SD image generation", "AI upscaling", "AI video generation", "Custom pipelines", "Web integration API", "Batch processing"],
+      "generative": ["GPT-4 / Claude chatbots", "AI sales assistants", "Automated FAQ", "Real-time translation", "Sentiment analysis", "Content personalisation"],
+      "automation": ["Custom n8n workflows", "AI form processing", "Automatic reports", "Data synchronisation", "Smart notifications", "Automated CRM"],
+      "realtime": ["Real-time WebSockets", "Live dashboards", "Live chat", "Push notifications", "Live stock updates", "Direct monitoring"]
+    },
+    "cases": {
+      "title": "Success stories",
+      "items": [
+        { "title": "AI Catalogue Generator", "desc": "Product sheet system with AI-generated images for a fashion store.", "result": "+340% publishing speed" },
+        { "title": "24/7 Virtual Assistant", "desc": "Smart chatbot for a clinic managing appointments and follow-ups.", "result": "-60% reception workload" },
+        { "title": "Live Sales Dashboard", "desc": "Real-time panel with predictive analytics for a restaurant chain.", "result": "+25% data-driven decisions" }
+      ]
+    },
+    "transformCta": {
+      "title": "Transform your web with AI",
+      "subtitle": "Take your business to the technological forefront with custom AI solutions.",
+      "button": "Talk to an expert"
     }
   },
   "games": {
@@ -152,7 +182,22 @@
       "ai": "AI"
     },
     "viewProject": "View project",
-    "viewAll": "View full portfolio"
+    "viewAll": "View full portfolio",
+    "cta": {
+      "title": "Could your project be here?",
+      "subtitle": "Let's talk about what we can create together.",
+      "button": "Start a project"
+    },
+    "projects": [
+      { "id": 1, "desc": "Electronics store with 10,000+ products and mobile app." },
+      { "id": 2, "desc": "AI-powered art generation platform for designers." },
+      { "id": 3, "desc": "Corporate RPG video game for sales gamification." },
+      { "id": 4, "desc": "Website with online reservations, digital menu and integrated delivery." },
+      { "id": 5, "desc": "Automatic fashion catalogue generator with AI models." },
+      { "id": 6, "desc": "Multiplayer educational game for language learning." },
+      { "id": 7, "desc": "Patient portal with online appointments, chatbot and telemedicine." },
+      { "id": 8, "desc": "Online supermarket with real-time stock and own app." }
+    ]
   },
   "contact": {
     "badge": "Contact",
@@ -168,12 +213,31 @@
       "submitting": "Sending...",
       "success": "Message sent successfully. We will contact you soon.",
       "error": "Error sending message. Please try again.",
-      "selectService": "Select a service"
+      "selectService": "Select a service",
+      "messagePlaceholder": "Tell us the details of your project...",
+      "errors": {
+        "nameRequired": "Name is required",
+        "emailRequired": "Email is required",
+        "emailInvalid": "Enter a valid email address",
+        "messageRequired": "Message is required",
+        "messageMin": "Message must be at least 20 characters"
+      }
     },
     "info": {
       "email": "netonAigency@proton.me",
       "phone": "+34 642 995 170",
       "location": "Madrid, Spain"
+    },
+    "hours": {
+      "title": "Office hours",
+      "weekdays": "Monday - Friday",
+      "saturday": "Saturday",
+      "sunday": "Sunday",
+      "closed": "Closed"
+    },
+    "response": {
+      "title": "24h Response",
+      "text": "We commit to responding to all enquiries within 24 business hours."
     }
   },
   "footer": {

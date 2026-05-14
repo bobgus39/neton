@@ -174,8 +174,8 @@ export default function Home() {
       {/* CTA */}
       <section className="section-padding px-6">
         <div className="max-w-4xl mx-auto text-center glass rounded-3xl p-16 border border-white/10">
-          <h2 className="text-4xl md:text-5xl font-black text-white mb-6">¿Listo para empezar?</h2>
-          <p className="text-gray-400 mb-10 text-lg">Cuéntanos tu proyecto y te enviamos una propuesta en 24h.</p>
+          <h2 className="text-4xl md:text-5xl font-black text-white mb-6">{t('home.cta.title')}</h2>
+          <p className="text-gray-400 mb-10 text-lg">{t('home.cta.subtitle')}</p>
           <Link to="/contacto">
             <Button size="lg" className="gradient-bg text-white font-semibold px-10">{t('contact.badge')} →</Button>
           </Link>

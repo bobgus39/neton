@@ -3,16 +3,16 @@ import { Link } from 'react-router-dom'
 import { Button, Chip, Card, CardContent } from '@heroui/react'
 
 const FEATURES = [
-  { key: 'comfyui', icon: '🎨', capabilities: ['Generación de imágenes SD', 'Upscaling con IA', 'Generación de vídeo IA', 'Pipelines personalizados', 'API de integración web', 'Batch processing'] },
-  { key: 'generative', icon: '💬', capabilities: ['Chatbots GPT-4 / Claude', 'Asistentes de ventas IA', 'FAQ automático', 'Traducción en tiempo real', 'Análisis de sentimientos', 'Personalización de contenido'] },
-  { key: 'automation', icon: '⚡', capabilities: ['Workflows n8n custom', 'Procesamiento IA de forms', 'Informes automáticos', 'Sincronización de datos', 'Notificaciones inteligentes', 'CRM automatizado'] },
-  { key: 'realtime', icon: '🔴', capabilities: ['WebSockets en tiempo real', 'Dashboards live', 'Chat en vivo', 'Notificaciones push', 'Stock en tiempo real', 'Monitorización en directo'] },
+  { key: 'comfyui', icon: '🎨' },
+  { key: 'generative', icon: '💬' },
+  { key: 'automation', icon: '⚡' },
+  { key: 'realtime', icon: '🔴' },
 ]
 
-const CASE_STUDIES = [
-  { title: 'Generador de Catálogos IA', desc: 'Sistema de fichas de producto con imágenes IA para una tienda de moda.', tags: ['ComfyUI', 'SD', 'React'], result: '+340% velocidad publicación' },
-  { title: 'Asistente Virtual 24/7', desc: 'Chatbot inteligente para clínica que gestiona citas y seguimiento.', tags: ['Claude API', 'WhatsApp'], result: '-60% carga en recepción' },
-  { title: 'Dashboard de Ventas Live', desc: 'Panel en tiempo real con análisis predictivo para cadena de restaurantes.', tags: ['WebSockets', 'React', 'PostgreSQL'], result: '+25% decisiones data-driven' },
+const CASE_TAGS = [
+  ['ComfyUI', 'SD', 'React'],
+  ['Claude API', 'WhatsApp'],
+  ['WebSockets', 'React', 'PostgreSQL'],
 ]
 
 export default function Innovation() {
@@ -33,23 +33,16 @@ export default function Innovation() {
             <div>
               <div className="text-5xl mb-4">🎨</div>
               <h2 className="text-3xl font-black text-white mb-4">ComfyUI Integration</h2>
-              <p className="text-gray-400 mb-6 leading-relaxed">
-                Integramos flujos de trabajo avanzados de ComfyUI directamente en tu web. Desde generadores de imágenes de producto hasta herramientas creativas para tus usuarios, todo conectado con tu base de datos.
-              </p>
+              <p className="text-gray-400 mb-6 leading-relaxed">{t('innovation.comfyuiSection.description')}</p>
               <Link to="/contacto">
-                <Button className="bg-purple-600 text-white" style={{ background: '#7c3aed' }}>Solicitar demo</Button>
+                <Button className="bg-purple-600 text-white" style={{ background: '#7c3aed' }}>{t('innovation.comfyuiSection.requestDemo')}</Button>
               </Link>
             </div>
             <div className="space-y-3">
-              {[
-                { step: '1', label: 'Usuario sube imagen o texto', border: 'border-purple-500/30' },
-                { step: '2', label: 'ComfyUI procesa con IA', border: 'border-indigo-500/30' },
-                { step: '3', label: 'Resultado guardado en tu DB', border: 'border-blue-500/30' },
-                { step: '4', label: 'Integración automática en tu web', border: 'border-cyan-500/30' },
-              ].map(({ step, label, border }) => (
-                <div key={step} className={`flex items-center gap-4 p-4 rounded-xl border ${border} bg-white/5`}>
-                  <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-white font-bold text-sm flex-shrink-0">{step}</div>
-                  <span className="text-gray-300 text-sm">{label}</span>
+              {['border-purple-500/30', 'border-indigo-500/30', 'border-blue-500/30', 'border-cyan-500/30'].map((border, i) => (
+                <div key={i} className={`flex items-center gap-4 p-4 rounded-xl border ${border} bg-white/5`}>
+                  <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-white font-bold text-sm flex-shrink-0">{i + 1}</div>
+                  <span className="text-gray-300 text-sm">{t('innovation.comfyuiSection.steps', { returnObjects: true })[i]}</span>
                 </div>
               ))}
             </div>
@@ -65,7 +58,7 @@ export default function Innovation() {
                 <h3 className="text-white font-bold text-xl mb-2">{t(`innovation.${key}.title`)}</h3>
                 <p className="text-gray-500 text-sm mb-6">{t(`innovation.${key}.description`)}</p>
                 <ul className="grid grid-cols-2 gap-2">
-                  {capabilities.map((cap) => (
+                  {(t(`innovation.capabilities.${key}`, { returnObjects: true })).map((cap) => (
                     <li key={cap} className="flex items-start gap-2 text-xs text-gray-400">
                       <span className="text-purple-400 mt-0.5">•</span> {cap}
                     </li>
@@ -78,14 +71,14 @@ export default function Innovation() {
 
         {/* Case Studies */}
         <div className="mb-20">
-          <h2 className="text-3xl font-black text-white text-center mb-12">Casos de éxito</h2>
+          <h2 className="text-3xl font-black text-white text-center mb-12">{t('innovation.cases.title')}</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {CASE_STUDIES.map(({ title, desc, tags, result }) => (
+            {(t('innovation.cases.items', { returnObjects: true })).map(({ title, desc, result }, i) => (
               <div key={title} className="glass rounded-2xl p-6 border border-white/10">
                 <h3 className="text-white font-bold mb-3">{title}</h3>
                 <p className="text-gray-500 text-sm mb-4 leading-relaxed">{desc}</p>
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {tags.map((tag) => (
+                  {CASE_TAGS[i].map((tag) => (
                     <span key={tag} className="text-xs bg-indigo-500/20 text-indigo-300 px-2 py-1 rounded-full border border-indigo-500/30">{tag}</span>
                   ))}
                 </div>
@@ -96,10 +89,10 @@ export default function Innovation() {
         </div>
 
         <div className="text-center glass rounded-3xl p-12 border border-purple-500/20">
-          <h2 className="text-3xl font-black text-white mb-4">Transforma tu web con IA</h2>
-          <p className="text-gray-400 mb-8">Lleva tu negocio a la vanguardia tecnológica con soluciones de IA a medida.</p>
+          <h2 className="text-3xl font-black text-white mb-4">{t('innovation.transformCta.title')}</h2>
+          <p className="text-gray-400 mb-8">{t('innovation.transformCta.subtitle')}</p>
           <Link to="/contacto">
-            <Button size="lg" className="text-white px-10" style={{ background: '#7c3aed' }}>Hablar con un experto</Button>
+            <Button size="lg" className="text-white px-10" style={{ background: '#7c3aed' }}>{t('innovation.transformCta.button')}</Button>
           </Link>
         </div>
       </div>

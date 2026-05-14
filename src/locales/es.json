@@ -7,6 +7,12 @@
     "games": "Videojuegos",
     "contact": "Contacto"
   },
+  "home": {
+    "cta": {
+      "title": "¿Listo para empezar?",
+      "subtitle": "Cuéntanos tu proyecto y te enviamos una propuesta en 24h."
+    }
+  },
   "hero": {
     "badge": "neton — Agencia Digital",
     "title": "Creamos el futuro",
@@ -115,6 +121,30 @@
     "realtime": {
       "title": "Tiempo Real",
       "description": "Dashboards en tiempo real, notificaciones push y actualizaciones instantáneas para mantener a tus clientes informados."
+    },
+    "comfyuiSection": {
+      "description": "Integramos flujos de trabajo avanzados de ComfyUI directamente en tu web. Desde generadores de imágenes de producto hasta herramientas creativas para tus usuarios, todo conectado con tu base de datos.",
+      "requestDemo": "Solicitar demo",
+      "steps": ["Usuario sube imagen o texto", "ComfyUI procesa con IA", "Resultado guardado en tu DB", "Integración automática en tu web"]
+    },
+    "capabilities": {
+      "comfyui": ["Generación de imágenes SD", "Upscaling con IA", "Generación de vídeo IA", "Pipelines personalizados", "API de integración web", "Batch processing"],
+      "generative": ["Chatbots GPT-4 / Claude", "Asistentes de ventas IA", "FAQ automático", "Traducción en tiempo real", "Análisis de sentimientos", "Personalización de contenido"],
+      "automation": ["Workflows n8n custom", "Procesamiento IA de forms", "Informes automáticos", "Sincronización de datos", "Notificaciones inteligentes", "CRM automatizado"],
+      "realtime": ["WebSockets en tiempo real", "Dashboards live", "Chat en vivo", "Notificaciones push", "Stock en tiempo real", "Monitorización en directo"]
+    },
+    "cases": {
+      "title": "Casos de éxito",
+      "items": [
+        { "title": "Generador de Catálogos IA", "desc": "Sistema de fichas de producto con imágenes IA para una tienda de moda.", "result": "+340% velocidad publicación" },
+        { "title": "Asistente Virtual 24/7", "desc": "Chatbot inteligente para clínica que gestiona citas y seguimiento.", "result": "-60% carga en recepción" },
+        { "title": "Dashboard de Ventas Live", "desc": "Panel en tiempo real con análisis predictivo para cadena de restaurantes.", "result": "+25% decisiones data-driven" }
+      ]
+    },
+    "transformCta": {
+      "title": "Transforma tu web con IA",
+      "subtitle": "Lleva tu negocio a la vanguardia tecnológica con soluciones de IA a medida.",
+      "button": "Hablar con un experto"
     }
   },
   "games": {
@@ -152,7 +182,22 @@
       "ai": "IA"
     },
     "viewProject": "Ver proyecto",
-    "viewAll": "Ver todo el portfolio"
+    "viewAll": "Ver todo el portfolio",
+    "cta": {
+      "title": "¿Tu proyecto podría estar aquí?",
+      "subtitle": "Hablemos sobre lo que podemos crear juntos.",
+      "button": "Empezar proyecto"
+    },
+    "projects": [
+      { "id": 1, "desc": "Tienda online de electrónica con 10.000+ productos y app móvil." },
+      { "id": 2, "desc": "Plataforma de generación de arte con IA para diseñadores." },
+      { "id": 3, "desc": "Videojuego corporativo RPG para gamificación de ventas." },
+      { "id": 4, "desc": "Web con reservas online, menú digital y delivery integrado." },
+      { "id": 5, "desc": "Generador automático de catálogos de moda con modelos IA." },
+      { "id": 6, "desc": "Juego educativo multijugador para aprendizaje de idiomas." },
+      { "id": 7, "desc": "Portal de pacientes con citas online, chatbot y telemedicina." },
+      { "id": 8, "desc": "Supermercado online con stock en tiempo real y app propia." }
+    ]
   },
   "contact": {
     "badge": "Contacto",
@@ -168,12 +213,31 @@
       "submitting": "Enviando...",
       "success": "Mensaje enviado correctamente. Te contactaremos pronto.",
       "error": "Error al enviar el mensaje. Por favor, inténtalo de nuevo.",
-      "selectService": "Selecciona un servicio"
+      "selectService": "Selecciona un servicio",
+      "messagePlaceholder": "Cuéntanos los detalles de tu proyecto...",
+      "errors": {
+        "nameRequired": "El nombre es obligatorio",
+        "emailRequired": "El email es obligatorio",
+        "emailInvalid": "Introduce un email válido",
+        "messageRequired": "El mensaje es obligatorio",
+        "messageMin": "El mensaje debe tener al menos 20 caracteres"
+      }
     },
     "info": {
       "email": "netonAigency@proton.me",
       "phone": "+34 642 995 170",
       "location": "Madrid, España"
+    },
+    "hours": {
+      "title": "Horario de atención",
+      "weekdays": "Lunes - Viernes",
+      "saturday": "Sábado",
+      "sunday": "Domingo",
+      "closed": "Cerrado"
+    },
+    "response": {
+      "title": "Respuesta en 24h",
+      "text": "Nos comprometemos a responder todas las consultas en menos de 24 horas laborables."
     }
   },
   "footer": {
