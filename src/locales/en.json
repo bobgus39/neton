@@ -205,7 +205,10 @@
       { "id": 14, "desc": "Medicine and physiotherapy clinic in Alicante." },
       { "id": 15, "desc": "Medical centre with specialties in Alicante." },
       { "id": 16, "desc": "Medical clinic in Ibi with comprehensive patient care." },
-      { "id": 17, "desc": "Dental clinic in Castalla, Alicante." }
+      { "id": 17, "desc": "Dental clinic in Castalla, Alicante." },
+      { "id": 18, "desc": "Mónica Sánchez physiotherapy centre." },
+      { "id": 19, "desc": "Veterinary clinic in Castalla for pet care." },
+      { "id": 20, "desc": "Medical centre in Castalla offering comprehensive healthcare." }
     ]
   },
   "contact": {

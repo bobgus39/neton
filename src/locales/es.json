@@ -205,7 +205,10 @@
       { "id": 14, "desc": "Clínica de medicina y fisioterapia en Alicante." },
       { "id": 15, "desc": "Centro médico con especialidades médicas en Alicante." },
       { "id": 16, "desc": "Clínica médica en Ibi con atención integral al paciente." },
-      { "id": 17, "desc": "Clínica dental en Castalla, Alicante." }
+      { "id": 17, "desc": "Clínica dental en Castalla, Alicante." },
+      { "id": 18, "desc": "Centro de fisioterapia de Mónica Sánchez." },
+      { "id": 19, "desc": "Clínica veterinaria en Castalla para el cuidado de tus mascotas." },
+      { "id": 20, "desc": "Centro médico en Castalla con atención sanitaria integral." }
     ]
   },
   "contact": {

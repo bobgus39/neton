@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { Button, Chip } from '@heroui/react'
 
-const THUMB = (url) => `https://image.thum.io/get/width/800/crop/500/${url}`
+const THUMB = (url) => `https://s0.wordpress.com/mshots/v1/${encodeURIComponent(url)}?w=800&h=500`
 
 const PROJECTS = [
   { id: 1,  title: 'ElectroShop Premium',          category: 'ecommerce', img: 'https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=800&q=80', tech: ['React', 'Node.js', 'MySQL', 'Stripe'] },
@@ -22,7 +22,10 @@ const PROJECTS = [
   { id: 14, title: 'Clínica Mar Mediterráneo',     category: 'web', img: THUMB('https://bobgus39.github.io/MarMediterraneo/'),  tech: ['HTML', 'CSS', 'JavaScript'], url: 'https://bobgus39.github.io/MarMediterraneo/' },
   { id: 15, title: 'Centro Médico Conde Lumiares', category: 'web', img: THUMB('https://bobgus39.github.io/condeLumiares2/'),   tech: ['HTML', 'CSS', 'JavaScript'], url: 'https://bobgus39.github.io/condeLumiares2/' },
   { id: 16, title: 'Nova Clínica Ibi',              category: 'web', img: THUMB('https://bobgus39.github.io/novaclinica/'),       tech: ['HTML', 'CSS', 'JavaScript'], url: 'https://bobgus39.github.io/novaclinica/' },
-  { id: 17, title: 'Dental Araceli Sánchez',       category: 'web', img: THUMB('https://bobgus39.github.io/dental-araceli/'),    tech: ['HTML', 'CSS', 'JavaScript'], url: 'https://bobgus39.github.io/dental-araceli/' },
+  { id: 17, title: 'Dental Araceli Sánchez',       category: 'web', img: THUMB('https://bobgus39.github.io/dental-araceli/'),      tech: ['HTML', 'CSS', 'JavaScript'], url: 'https://bobgus39.github.io/dental-araceli/' },
+  { id: 18, title: 'Fisioterapia Mónica Sánchez',   category: 'web', img: THUMB('https://bobgus39.github.io/monica-fisioterapia/'), tech: ['HTML', 'CSS', 'JavaScript'], url: 'https://bobgus39.github.io/monica-fisioterapia/' },
+  { id: 19, title: 'Clínica Veterinaria Castalla', category: 'web', img: THUMB('https://bobgus39.github.io/cvCastalla/'),          tech: ['HTML', 'CSS', 'JavaScript'], url: 'https://bobgus39.github.io/cvCastalla/' },
+  { id: 20, title: 'Centro Médico Medivial',       category: 'web', img: THUMB('https://bobgus39.github.io/medivial/'),            tech: ['HTML', 'CSS', 'JavaScript'], url: 'https://bobgus39.github.io/medivial/' },
 ]
 
 const FILTERS = ['all', 'web', 'ecommerce', 'game', 'ai']
