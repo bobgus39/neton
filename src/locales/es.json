@@ -203,7 +203,8 @@
       { "id": 12, "desc": "Clínica de depilación láser y estética avanzada." },
       { "id": 13, "desc": "Clínica de podología en Ibi, Alicante." },
       { "id": 14, "desc": "Clínica de medicina y fisioterapia en Alicante." },
-      { "id": 15, "desc": "Centro médico con especialidades médicas en Alicante." }
+      { "id": 15, "desc": "Centro médico con especialidades médicas en Alicante." },
+      { "id": 16, "desc": "Clínica médica en Ibi con atención integral al paciente." }
     ]
   },
   "contact": {

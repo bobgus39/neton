@@ -21,6 +21,7 @@ const PROJECTS = [
   { id: 13, title: 'PodologíaCPIP',                category: 'web', img: THUMB('https://bobgus39.github.io/cpipFront/'),        tech: ['HTML', 'CSS', 'JavaScript'], url: 'https://bobgus39.github.io/cpipFront/' },
   { id: 14, title: 'Clínica Mar Mediterráneo',     category: 'web', img: THUMB('https://bobgus39.github.io/MarMediterraneo/'),  tech: ['HTML', 'CSS', 'JavaScript'], url: 'https://bobgus39.github.io/MarMediterraneo/' },
   { id: 15, title: 'Centro Médico Conde Lumiares', category: 'web', img: THUMB('https://bobgus39.github.io/condeLumiares2/'),   tech: ['HTML', 'CSS', 'JavaScript'], url: 'https://bobgus39.github.io/condeLumiares2/' },
+  { id: 16, title: 'Nova Clínica Ibi',             category: 'web', img: THUMB('https://bobgus39.github.io/novaclinica/'),      tech: ['HTML', 'CSS', 'JavaScript'], url: 'https://bobgus39.github.io/novaclinica/' },
 ]
 
 const FILTERS = ['all', 'web', 'ecommerce', 'game', 'ai']
