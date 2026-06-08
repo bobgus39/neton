@@ -196,7 +196,14 @@
       { "id": 5, "desc": "Automatic fashion catalogue generator with AI models." },
       { "id": 6, "desc": "Multiplayer educational game for language learning." },
       { "id": 7, "desc": "Patient portal with online appointments, chatbot and telemedicine." },
-      { "id": 8, "desc": "Online supermarket with real-time stock and own app." }
+      { "id": 8,  "desc": "Online supermarket with real-time stock and own app." },
+      { "id": 9,  "desc": "Physiotherapy clinic website in Ibi, Alicante." },
+      { "id": 10, "desc": "Dental clinic in Playa de San Juan with online booking." },
+      { "id": 11, "desc": "Physiotherapy and rehabilitation centre in Alicante." },
+      { "id": 12, "desc": "Laser hair removal and advanced aesthetics clinic." },
+      { "id": 13, "desc": "Podiatry clinic in Ibi, Alicante." },
+      { "id": 14, "desc": "Medicine and physiotherapy clinic in Alicante." },
+      { "id": 15, "desc": "Medical centre with specialties in Alicante." }
     ]
   },
   "contact": {

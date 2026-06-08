@@ -196,7 +196,14 @@
       { "id": 5, "desc": "Generador automático de catálogos de moda con modelos IA." },
       { "id": 6, "desc": "Juego educativo multijugador para aprendizaje de idiomas." },
       { "id": 7, "desc": "Portal de pacientes con citas online, chatbot y telemedicina." },
-      { "id": 8, "desc": "Supermercado online con stock en tiempo real y app propia." }
+      { "id": 8,  "desc": "Supermercado online con stock en tiempo real y app propia." },
+      { "id": 9,  "desc": "Web para clínica de fisioterapia en Ibi, Alicante." },
+      { "id": 10, "desc": "Clínica dental en Playa de San Juan con cita online." },
+      { "id": 11, "desc": "Centro de fisioterapia y rehabilitación en Alicante." },
+      { "id": 12, "desc": "Clínica de depilación láser y estética avanzada." },
+      { "id": 13, "desc": "Clínica de podología en Ibi, Alicante." },
+      { "id": 14, "desc": "Clínica de medicina y fisioterapia en Alicante." },
+      { "id": 15, "desc": "Centro médico con especialidades médicas en Alicante." }
     ]
   },
   "contact": {

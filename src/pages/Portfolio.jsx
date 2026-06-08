@@ -3,15 +3,24 @@ import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { Button, Chip } from '@heroui/react'
 
+const THUMB = (url) => `https://image.thum.io/get/width/800/crop/500/${url}`
+
 const PROJECTS = [
-  { id: 1, title: 'ElectroShop Premium', category: 'ecommerce', img: 'https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=800&q=80', tech: ['React', 'Node.js', 'MySQL', 'Stripe'] },
-  { id: 2, title: 'ArtGen Studio', category: 'ai', img: 'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&q=80', tech: ['Python', 'ComfyUI', 'React', 'FastAPI'] },
-  { id: 3, title: 'DragonQuest Corp', category: 'game', img: 'https://images.unsplash.com/photo-1511512578047-dfb367046420?w=800&q=80', tech: ['Unity', 'C#', 'WebGL', 'PHP'] },
-  { id: 4, title: 'RestaurantePro', category: 'web', img: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80', tech: ['React', 'Node.js', 'MySQL'] },
-  { id: 5, title: 'FashionAI Catalog', category: 'ai', img: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80', tech: ['ComfyUI', 'Python', 'React', 'PostgreSQL'] },
-  { id: 6, title: 'MindRunner Game', category: 'game', img: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&q=80', tech: ['Phaser.js', 'Node.js', 'Socket.io'] },
-  { id: 7, title: 'Clínica MediConnect', category: 'web', img: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80', tech: ['React', 'Node.js', 'MySQL', 'Twilio'] },
-  { id: 8, title: 'SuperMarket Live', category: 'ecommerce', img: 'https://images.unsplash.com/photo-1542838132-92c53300491e?w=800&q=80', tech: ['Next.js', 'PostgreSQL', 'Redis', 'Stripe'] },
+  { id: 1,  title: 'ElectroShop Premium',          category: 'ecommerce', img: 'https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=800&q=80', tech: ['React', 'Node.js', 'MySQL', 'Stripe'] },
+  { id: 2,  title: 'ArtGen Studio',                category: 'ai',       img: 'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&q=80', tech: ['Python', 'ComfyUI', 'React', 'FastAPI'] },
+  { id: 3,  title: 'DragonQuest Corp',             category: 'game',     img: 'https://images.unsplash.com/photo-1511512578047-dfb367046420?w=800&q=80', tech: ['Unity', 'C#', 'WebGL', 'PHP'] },
+  { id: 4,  title: 'RestaurantePro',               category: 'web',      img: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80', tech: ['React', 'Node.js', 'MySQL'] },
+  { id: 5,  title: 'FashionAI Catalog',            category: 'ai',       img: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80', tech: ['ComfyUI', 'Python', 'React', 'PostgreSQL'] },
+  { id: 6,  title: 'MindRunner Game',              category: 'game',     img: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&q=80', tech: ['Phaser.js', 'Node.js', 'Socket.io'] },
+  { id: 7,  title: 'Clínica MediConnect',          category: 'web',      img: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80', tech: ['React', 'Node.js', 'MySQL', 'Twilio'] },
+  { id: 8,  title: 'SuperMarket Live',             category: 'ecommerce', img: 'https://images.unsplash.com/photo-1542838132-92c53300491e?w=800&q=80', tech: ['Next.js', 'PostgreSQL', 'Redis', 'Stripe'] },
+  { id: 9,  title: 'Fisioterapia Armero',          category: 'web', img: THUMB('https://bobgus39.github.io/armeroFront/'),      tech: ['HTML', 'CSS', 'JavaScript'], url: 'https://bobgus39.github.io/armeroFront/' },
+  { id: 10, title: 'Clínica Goleta Dental',        category: 'web', img: THUMB('https://bobgus39.github.io/goleta-dental/'),    tech: ['HTML', 'CSS', 'JavaScript'], url: 'https://bobgus39.github.io/goleta-dental/' },
+  { id: 11, title: 'Imtemedic',                    category: 'web', img: THUMB('https://bobgus39.github.io/imtemedic/'),        tech: ['HTML', 'CSS', 'JavaScript'], url: 'https://bobgus39.github.io/imtemedic/' },
+  { id: 12, title: 'Clínicas Armónico',            category: 'web', img: THUMB('https://bobgus39.github.io/armonico/'),         tech: ['HTML', 'CSS', 'JavaScript'], url: 'https://bobgus39.github.io/armonico/' },
+  { id: 13, title: 'PodologíaCPIP',                category: 'web', img: THUMB('https://bobgus39.github.io/cpipFront/'),        tech: ['HTML', 'CSS', 'JavaScript'], url: 'https://bobgus39.github.io/cpipFront/' },
+  { id: 14, title: 'Clínica Mar Mediterráneo',     category: 'web', img: THUMB('https://bobgus39.github.io/MarMediterraneo/'),  tech: ['HTML', 'CSS', 'JavaScript'], url: 'https://bobgus39.github.io/MarMediterraneo/' },
+  { id: 15, title: 'Centro Médico Conde Lumiares', category: 'web', img: THUMB('https://bobgus39.github.io/condeLumiares2/'),   tech: ['HTML', 'CSS', 'JavaScript'], url: 'https://bobgus39.github.io/condeLumiares2/' },
 ]
 
 const FILTERS = ['all', 'web', 'ecommerce', 'game', 'ai']
@@ -54,13 +63,16 @@ export default function Portfolio() {
 
         {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {filtered.map(({ id, title, img, tech, category }) => {
+          {filtered.map(({ id, title, img, tech, category, url }) => {
             const projectDescs = t('portfolio.projects', { returnObjects: true })
             const desc = projectDescs.find((p) => p.id === id)?.desc || ''
+            const Wrapper = url ? 'a' : 'div'
+            const wrapperProps = url ? { href: url, target: '_blank', rel: 'noopener noreferrer' } : {}
             return (
-            <div
+            <Wrapper
               key={id}
-              className="group relative overflow-hidden rounded-2xl border border-white/10 hover:border-indigo-500/40 transition-all duration-300 hover:scale-[1.02]"
+              {...wrapperProps}
+              className="group relative overflow-hidden rounded-2xl border border-white/10 hover:border-indigo-500/40 transition-all duration-300 hover:scale-[1.02] block"
             >
               <img src={img} alt={title} className="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-110" />
               <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -80,7 +92,7 @@ export default function Portfolio() {
                   ))}
                 </div>
               </div>
-            </div>
+            </Wrapper>
           )})}
         </div>
 
